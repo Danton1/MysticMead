@@ -1,11 +1,36 @@
-[gd_scene load_steps=4 format=3 uid="uid://dktwo5xrwc32q"]
+[gd_scene load_steps=5 format=3 uid="uid://dktwo5xrwc32q"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_usvqv"]
 [ext_resource type="Texture2D" uid="uid://cboxljehtxij2" path="res://ButtonAssetPack-Adwitr/Button (1) - Copy.png" id="2_5osb5"]
+[ext_resource type="Texture2D" uid="uid://ojl2jc2jn5wv" path="res://DanBackground.jpg" id="2_arca5"]
 [ext_resource type="Texture2D" uid="uid://b086wl4dy3u5c" path="res://ButtonAssetPack-Adwitr/Button Exit.png" id="3_yja64"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_usvqv")
+
+[node name="DanBackground" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.294118)
+position = Vector2(145.125, 323.621)
+scale = Vector2(0.156183, 0.162072)
+texture = ExtResource("2_arca5")
+
+[node name="DanBackground2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.294118)
+position = Vector2(432.438, 323)
+scale = Vector2(0.151432, 0.162072)
+texture = ExtResource("2_arca5")
+
+[node name="DanBackground3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.294118)
+position = Vector2(718.688, 323)
+scale = Vector2(0.154912, 0.162072)
+texture = ExtResource("2_arca5")
+
+[node name="DanBackground4" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.294118)
+position = Vector2(1008.19, 323.621)
+scale = Vector2(0.155447, 0.162072)
+texture = ExtResource("2_arca5")
 
 [node name="Quit" type="Button" parent="."]
 offset_left = 314.0
@@ -24,6 +49,7 @@ texture_pressed = ExtResource("3_yja64")
 stretch_mode = 0
 
 [node name="Label" type="Label" parent="TextureButton"]
+layout_mode = 0
 offset_left = 205.0
 offset_top = 93.0
 offset_right = 245.0
