@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d1cin43ulu8cy"]
+[gd_scene load_steps=8 format=3 uid="uid://d1cin43ulu8cy"]
 
 [ext_resource type="Texture2D" uid="uid://foodjqsom2bf" path="res://ConradBackground.jpg" id="1_klcmb"]
 [ext_resource type="Script" path="res://world.gd" id="1_v821f"]
+[ext_resource type="Texture2D" uid="uid://dqtmwslx4gn3f" path="res://ButtonAssetPack-Adwitr/Button (7).png" id="3_d41c7"]
 
 [sub_resource type="Animation" id="Animation_h8clo"]
 resource_name = "new_animation"
@@ -25,6 +26,46 @@ _data = {
 "new_animation": SubResource("Animation_h8clo")
 }
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f02m3"]
+texture = ExtResource("3_d41c7")
+texture_region_size = Vector2i(17, 17)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+1:0/0 = 0
+1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:0/0/physics_layer_0/angular_velocity = 0.0
+2:0/0 = 0
+2:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:0/0/physics_layer_0/angular_velocity = 0.0
+0:1/0 = 0
+0:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:1/0/physics_layer_0/angular_velocity = 0.0
+1:1/0 = 0
+1:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:1/0/physics_layer_0/angular_velocity = 0.0
+2:1/0 = 0
+2:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:1/0/physics_layer_0/angular_velocity = 0.0
+0:2/0 = 0
+0:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:2/0/physics_layer_0/angular_velocity = 0.0
+1:2/0 = 0
+1:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:2/0/physics_layer_0/angular_velocity = 0.0
+2:2/0 = 0
+2:2/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:2/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_1cb3a"]
+tile_size = Vector2i(32, 14)
+physics_layer_0/collision_layer = 1
+terrain_set_0/mode = 0
+navigation_layer_0/layers = 1
+custom_data_layer_0/name = ""
+custom_data_layer_0/type = 0
+sources/0 = SubResource("TileSetAtlasSource_f02m3")
+
 [node name="World" type="Node2D"]
 script = ExtResource("1_v821f")
 
@@ -42,5 +83,9 @@ libraries = {
 position = Vector2(534.862, 331)
 scale = Vector2(0.189307, 0.189307)
 texture = ExtResource("1_klcmb")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_1cb3a")
+format = 2
 
 [connection signal="draw" from="." to="." method="_on_draw"]
